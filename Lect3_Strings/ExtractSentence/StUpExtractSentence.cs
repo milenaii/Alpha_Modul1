@@ -1,5 +1,5 @@
 ﻿using System;
-
+// 20t bgcoder
 namespace ExtractSentence
 {
     class StUpExtractSentence
@@ -8,22 +8,18 @@ namespace ExtractSentence
         {
             string searchedWord = Console.ReadLine();
             string text = Console.ReadLine();
+            //text = text.ToUpper();
+            //searchedWord = searchedWord.ToUpper();
 
-            int startSeq = int.MinValue;
-            int endSeq = int.MinValue;
+            string [] sentence = text.Trim().Split(new[] {"."},StringSplitOptions.RemoveEmptyEntries);
 
-            //while (text.IndexOf(" " + searchedWord + " ") != -1)
-            //{
-                int word = text.IndexOf(" " + searchedWord + " ");
-                startSeq = text.LastIndexOf('.', word);
-                endSeq = text.IndexOf('.', word);
-
-                if (startSeq == -1)
+            for (int i = 0; i < sentence.Length; i++)
+            {
+                if (sentence[i].Contains(" "+ searchedWord +" ") || sentence[i].Contains(" " + searchedWord + ", ") || sentence[i].Contains(" "+ searchedWord + ":") || sentence[i].Contains(" " + searchedWord + ";") || sentence[i].Contains("\"" + searchedWord + "\"") || sentence[i].Contains(" " + searchedWord + "\"") || sentence[i].Contains("\"" + searchedWord + " ") || sentence[i].Contains("(" + searchedWord + ")") || sentence[i].Contains("(" + searchedWord + " ") || sentence[i].Contains(" " + searchedWord + ")"))
                 {
-                    startSeq = 0;
+                    Console.Write(sentence[i] + ".");
                 }
-            //}
-            Console.Write(text.Substring(startSeq, endSeq - startSeq + 1));
+            }
 
         }
     }
