@@ -75,13 +75,14 @@ namespace FillTheMatrix2
 
                 row = n - 1;
                 col = 0;
-                while (row < n && col < n)
+                while (row >= 0 && col < n)
                 {
+                    
                     //if (row == n - 1)
                     //{
                     //    col--;
                     //}
-                    matrix[row++, col++] = counter++;
+                    matrix[row, col] = counter++;
                     row--;
                 }
                 col = 1;
