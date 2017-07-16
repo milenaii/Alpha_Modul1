@@ -8,16 +8,15 @@ namespace ExtractSentence
         {
             string searchedWord = Console.ReadLine();
             string text = Console.ReadLine();
-            //text = text.ToUpper();
-            //searchedWord = searchedWord.ToUpper();
 
-            string [] sentence = text.Trim().Split(new[] {"."},StringSplitOptions.RemoveEmptyEntries);
 
-            for (int i = 0; i < sentence.Length; i++)
+            string[] sentence = text.Trim().Split(new[] { "." }, StringSplitOptions.RemoveEmptyEntries);
+
+            foreach (string item in sentence)
             {
-                if (sentence[i].Contains(" "+ searchedWord +" ") || sentence[i].Contains(" " + searchedWord + ", ") || sentence[i].Contains(" "+ searchedWord + ":") || sentence[i].Contains(" " + searchedWord + ";") || sentence[i].Contains("\"" + searchedWord + "\"") || sentence[i].Contains(" " + searchedWord + "\"") || sentence[i].Contains("\"" + searchedWord + " ") || sentence[i].Contains("(" + searchedWord + ")") || sentence[i].Contains("(" + searchedWord + " ") || sentence[i].Contains(" " + searchedWord + ")"))
+                for (int i = 0; i < sentence.Length; i++)
                 {
-                    Console.Write(sentence[i] + ".");
+
                 }
             }
 

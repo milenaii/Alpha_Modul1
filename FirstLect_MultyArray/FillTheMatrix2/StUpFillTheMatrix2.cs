@@ -77,7 +77,7 @@ namespace FillTheMatrix2
                 col = 0;
                 while (row >= 0 && col < n)
                 {
-                    
+
                     //if (row == n - 1)
                     //{
                     //    col--;
@@ -95,9 +95,6 @@ namespace FillTheMatrix2
 
             }
 
-
-
-
             if (character == "d")
             {
                 int moveRow = 1;
@@ -106,40 +103,52 @@ namespace FillTheMatrix2
                 int curRow = 0;
                 int curCol = 0;
 
+                counter = 1;
                 //down         //right        //up            //left
                 //moveRow = 1; //moveRow = 0; //moveRow = -1; //moveRow = 0;
                 //moveCol = 0; //moveCol = 1; //moveCol = 0;  //moveCol = -1;
 
                 while (counter <= n * n)
                 {
-                    matrix[curRow, curCol] = counter++;
+                    // matrix[curRow, curCol] = counter++;
 
                     if (curRow == n || curRow == -1 || curCol == n || curCol == -1 || matrix[curRow, curCol] != 0)
                     {
-                        if (moveRow == 1 && moveCol == 0)
+                        //change directions
+                        if (moveRow == 1 && moveCol == 0) // down
                         {
+                            curRow--;
                             moveRow = 0;
                             moveCol = 1;
+                            curCol += moveCol;
                         }
-                        if (moveRow == 0 && moveCol == 1)
+                        else if (moveRow == 0 && moveCol == 1) // right
                         {
+                            curCol--;
                             moveRow = -1;
                             moveCol = 0;
+                            curRow += moveRow;
                         }
-                        if (moveRow == -1 && moveCol == 0)
+                        else if (moveRow == -1 && moveCol == 0) // up
                         {
+                            curRow++;
                             moveRow = 0;
                             moveCol = -1;
+                            curCol += moveCol;
                         }
-                        curRow += moveRow;
-                        curCol += moveCol;
+                        else if (moveRow == 0 && moveCol == -1) //left
+                        {
+                            curCol++;
+                            moveRow = 1;
+                            moveCol = 0;
+                            curRow += moveRow;
+                        }
                     }
+                    matrix[curRow, curCol] = counter++;
+                    curRow += moveRow;
+                    curCol += moveCol;
                 }
-
-
-
             }
-
 
 
             //Print

@@ -7,102 +7,210 @@ namespace FirstLect
         static void Main()
         {
             int n = int.Parse(Console.ReadLine());
-            string character = Console.ReadLine();
-
             int[,] matrix = new int[n, n];
-            int num = 1;
 
-            if (character == "a")
+            string ch = Console.ReadLine();
+
+            if (ch == "a")
             {
-                for (int col = 0; col < n; col++)
+                int count = 1;
+                for (int c = 0; c < n; c++)
                 {
-                    for (int row = 0; row < n; row++)
+                    for (int r = 0; r < n; r++)
                     {
-                        matrix[row, col] = num++;
-                        //Console.WriteLine(matrix[row, col]);
+                        matrix[r, c] = count;
+                        count++;
                     }
                 }
+                // PrintTheMatrix(n, matrix);
+            }
+            if (ch == "aa")                          // 16 15 14 13
+            {                                        // 12 11 10 9
+                int count = 1;                       // 8 7 6 5
+                for (int r = n - 1; r >= 0; r--)     // 4 3 2 1
+                {
+                    for (int c = n - 1; c >= 0; c--)
+                    {
+                        matrix[r, c] = count;
+                        count++;
+                    }
+                }
+                // PrintTheMatrix(n, matrix);
+            }
+            if (ch == "aaa")
+            {                                        // 4 3 2 1
+                int count = 1;                       // 8 7 6 5
+                for (int r = 0; r < n; r++)           // 12 11 10 9         
+                {                                     // 16 15 14 13
+                    for (int c = n - 1; c >= 0; c--)
+                    {
+                        matrix[r, c] = count;
+                        count++;
+                    }
+                }
+                PrintTheMatrix(n, matrix);
             }
 
-            else if (character == "b")
+            if (ch == "b")
             {
-                for (int col = 0; col < n; col++)
-                {
-                    for (int row = 0; row < n; row++)
+                int count = 1;                              // 1 8 9 16
+                for (int c = 0; c < n; c++)                 // 2 7 10 15
+                {                                           // 3 6 11 14
+                    if (c % 2 == 0)                         // 4 5 12 13
                     {
-                        if (col % 2 == 0)
+                        for (int r = 0; r < n; r++)
                         {
-                            matrix[row, col] = row + 1 + col * n;
+                            matrix[r, c] = count;
+                            count++;
                         }
-                        else if (col % 2 != 0)
-                        {
-                            matrix[row, col] = (col + 1) * n - row;
-                        }
-                    }
-                }
-            }
-            else if (character == "c")
-            {
-                //under the main diagonal
-                for (int i = n - 1; i >= 0; i--)
-                {
-                    int row = i;
-                    int col = 0;
-                    while (row < n)
-                    {
-                        matrix[row, col] = num;
-                        row++;
-                        col++;
-                        num++;
-                    }
-                }
-                //over the main diagonal
-                for (int j = 1; j < n; j++)
-                {
-                    int col = j;
-                    int row = 0;
-                    while (row < n && col < n)
-                    {
-                        matrix[row, col] = num;
-                        row++;
-                        col++;
-                        num++;
-                    }
-                }
-            }
-            //else if (character == "d")
-            //{
-            //    int offset = 0;
-
-            //    while (true)
-            //    {
-            //        for (int row = 0; row < n; row++)
-            //        {
-            //            for (int col = 0; col < n; col++)
-            //            {
-            //                matrix[row, col] = num;
-            //                num++;
-            //            }
-            //        }
-            //    }
-
-
-            //Print the result
-            for (int row = 0; row < n; row++)
-            {
-                for (int col = 0; col < n ; col++)
-                {
-                    if (col == n - 1)
-                    {
-                        Console.Write(matrix[row, col]);
                     }
                     else
                     {
-                        Console.Write(matrix[row, col] + " ");
+                        for (int r = n - 1; r >= 0; r--)
+                        {
+                            matrix[r, c] = count;
+                            count++;
+                        }
                     }
                 }
-                Console.WriteLine();
+               // PrintTheMatrix(n, matrix);
+            }
+            if (ch == "c")
+            {
+
+                ////1 way
+                //int count = 1;
+                //int r = n - 1;
+                //int c = 0;
+                ////under main diagonal
+                //for (int i = n - 1; i >= 0; i--)
+                //{
+                //    r = i;
+                //    c = 0;
+                //    while (r < n && c < n)
+                //    {
+                //        matrix[r++, c++] = count++;
+                //    }
+
+                //}
+                ////over main diagonal
+                //for (int i = 1; i < n; i++)
+                //{
+                //    r = 0;
+                //    c = i;
+                //    while (r < n && c < n)
+                //    {
+                //        matrix[r++, c++] = count++;
+                //    }
+                //}
+
+                //2 way
+
+                int count = 1;
+                int r = n - 1;
+                int c = 0;
+
+                while (count <= n * n)
+                {
+                     count = FillDiagonal(n, matrix, count, r, c);
+
+                    if (r == 0)
+                    {
+                        c++;
+                    }
+                    else
+                    {
+                        r--;
+                    }
+                }
+               // PrintTheMatrix(n, matrix);
+            }
+            
+            if (ch == "d")
+            {
+                int moveRow = 1;
+                int moveCol = 0;
+
+                int curRow = 0;
+                int curCol = 0;
+
+                int count = 1;
+                //down         //right        //up            //left
+                //moveRow = 1; //moveRow = 0; //moveRow = -1; //moveRow = 0;
+                //moveCol = 0; //moveCol = 1; //moveCol = 0;  //moveCol = -1;
+
+                while (count <= n * n)
+                {
+                    if (curRow == n || curRow == -1 || curCol == n || curCol == -1 || matrix[curRow, curCol] != 0)
+                    {
+                        //change directions
+                        if (moveRow == 1 && moveCol == 0) // down
+                        {
+                            curRow--;
+                            moveRow = 0;
+                            moveCol = 1;
+                            curCol += moveCol;
+                            curRow += moveRow;
+                        }
+                        else if (moveRow == 0 && moveCol == 1) // right
+                        {
+                            curCol--;
+                            moveRow = -1;
+                            moveCol = 0;
+                            curRow += moveRow;
+                            curCol += moveCol;
+                        }
+                        else if (moveRow == -1 && moveCol == 0) // up
+                        {
+                            curRow++;
+                            moveRow = 0;
+                            moveCol = -1;
+                            curCol += moveCol;
+                            curRow += moveRow;
+                        }
+                        else if (moveRow == 0 && moveCol == -1) //left
+                        {
+                            curCol++;
+                            moveRow = 1;
+                            moveCol = 0;
+                            curRow += moveRow;
+                            curCol += moveCol;
+                        }
+                    }
+                    matrix[curRow, curCol] = count++;
+                    curRow += moveRow;
+                    curCol += moveCol;
+                }
+            }
+            PrintTheMatrix(n, matrix);
+        }
+        private static int FillDiagonal(int n, int[,] matrix, int count, int r, int c)
+        {
+            while (r < n && c < n)
+            {
+                matrix[r++, c++] = count++;
+            }
+            return count;
+        }
+
+        static void PrintTheMatrix(int n, int[,] matrix)
+        {
+            for (int r = 0; r < n; r++)
+            {
+                for (int c = 0; c < n; c++)
+                {
+                    if (c == n - 1)
+                    {
+                        Console.WriteLine(matrix[r, c]);
+                    }
+                    else
+                    {
+                        Console.Write(matrix[r, c] + " ");
+                    }
+                }
             }
         }
+
+
     }
 }
