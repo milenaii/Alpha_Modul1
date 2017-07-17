@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lect3_Strings", "Lect3_Strings\Lect3_Strings.csproj", "{4D58C900-6CBA-4F85-A874-25A892679CAD}"
 EndProject
@@ -18,6 +18,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnicideCharacter", "UnicideCharacter\UnicideCharacter.csproj", "{59953F98-033A-417D-88B7-061C4E28BD2A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParseURL", "ParseURL\ParseURL.csproj", "{76F9C309-B8E9-4302-8523-49C9502DC527}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeriesOfLetters", "SeriesOfLetters\SeriesOfLetters.csproj", "{379D084E-D56F-444C-8D96-7404AF3744C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{76F9C309-B8E9-4302-8523-49C9502DC527}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76F9C309-B8E9-4302-8523-49C9502DC527}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76F9C309-B8E9-4302-8523-49C9502DC527}.Release|Any CPU.Build.0 = Release|Any CPU
+		{379D084E-D56F-444C-8D96-7404AF3744C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{379D084E-D56F-444C-8D96-7404AF3744C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{379D084E-D56F-444C-8D96-7404AF3744C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{379D084E-D56F-444C-8D96-7404AF3744C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
