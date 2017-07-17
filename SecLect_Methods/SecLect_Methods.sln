@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberAsArray", "NumberAsAr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pr", "pr\pr.csproj", "{021F3D5B-9EE8-440D-9A7F-50834ABD38D6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NFactorial", "NFactorial\NFactorial.csproj", "{05BFFE12-4F6B-48C0-8046-A37895A91895}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adding polynomials", "Adding polynomials\Adding polynomials.csproj", "{837D5FD8-9CEC-4018-9DF5-F9C9A91A5CF1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{021F3D5B-9EE8-440D-9A7F-50834ABD38D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{021F3D5B-9EE8-440D-9A7F-50834ABD38D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{021F3D5B-9EE8-440D-9A7F-50834ABD38D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05BFFE12-4F6B-48C0-8046-A37895A91895}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05BFFE12-4F6B-48C0-8046-A37895A91895}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05BFFE12-4F6B-48C0-8046-A37895A91895}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05BFFE12-4F6B-48C0-8046-A37895A91895}.Release|Any CPU.Build.0 = Release|Any CPU
+		{837D5FD8-9CEC-4018-9DF5-F9C9A91A5CF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{837D5FD8-9CEC-4018-9DF5-F9C9A91A5CF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{837D5FD8-9CEC-4018-9DF5-F9C9A91A5CF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{837D5FD8-9CEC-4018-9DF5-F9C9A91A5CF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
