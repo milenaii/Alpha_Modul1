@@ -1,13 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays", "Arrays\Arrays.csproj", "{272968FC-A924-462F-8AA3-53DF7BD46C8C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompareArrays", "CompareArrays\CompareArrays.csproj", "{E17AA5C9-4650-4E3A-9E4E-C58986BE842E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompareCharArrays", "CompareCharArrays\CompareCharArrays.csproj", "{4FB1F9E5-3BFA-410A-90DF-73C6E9E218FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxSequence", "MaxSequence\MaxSequence.csproj", "{1EBFE81E-A247-4E61-977C-7150B5352A5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxIncreaseSeq", "MaxIncreaseSeq\MaxIncreaseSeq.csproj", "{628248A3-B6BF-478F-8103-B90F0704B66E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxKSum", "MaxKSum\MaxKSum.csproj", "{8A66E57F-936D-47E7-8A84-DD5D0DB97307}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeNumbers", "PrimeNumbers\PrimeNumbers.csproj", "{7D6F28B5-3165-4FC4-AB60-FFA9DE0B9557}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +35,22 @@ Global
 		{4FB1F9E5-3BFA-410A-90DF-73C6E9E218FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FB1F9E5-3BFA-410A-90DF-73C6E9E218FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FB1F9E5-3BFA-410A-90DF-73C6E9E218FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EBFE81E-A247-4E61-977C-7150B5352A5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EBFE81E-A247-4E61-977C-7150B5352A5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EBFE81E-A247-4E61-977C-7150B5352A5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EBFE81E-A247-4E61-977C-7150B5352A5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{628248A3-B6BF-478F-8103-B90F0704B66E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{628248A3-B6BF-478F-8103-B90F0704B66E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{628248A3-B6BF-478F-8103-B90F0704B66E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{628248A3-B6BF-478F-8103-B90F0704B66E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A66E57F-936D-47E7-8A84-DD5D0DB97307}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A66E57F-936D-47E7-8A84-DD5D0DB97307}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A66E57F-936D-47E7-8A84-DD5D0DB97307}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A66E57F-936D-47E7-8A84-DD5D0DB97307}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D6F28B5-3165-4FC4-AB60-FFA9DE0B9557}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D6F28B5-3165-4FC4-AB60-FFA9DE0B9557}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D6F28B5-3165-4FC4-AB60-FFA9DE0B9557}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D6F28B5-3165-4FC4-AB60-FFA9DE0B9557}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
