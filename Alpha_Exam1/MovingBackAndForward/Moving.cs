@@ -37,7 +37,6 @@ namespace MovingBackAndForward
 
                         sumF += arr[startP];
                         count++;
-                       // startP = startP + size;
                     }
                     count = 0;
                 }
@@ -54,16 +53,13 @@ namespace MovingBackAndForward
                         //Find mirror on your mirror - searched index
                         startP = arr.Length - mirStartP - 1;
 
-
                         sumB += arr[startP];
                         count++;
-                        //startP = startP - size;
                     }
                     count = 0;
                 }
                 moves = Console.ReadLine();
             }
-
             Console.WriteLine("Forward: {0}", sumF);
             Console.WriteLine("Backwards: {0}", sumB);
         }

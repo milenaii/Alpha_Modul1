@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{933A0BA6-B2F3-401B-B63E-15C106F20808}</ProjectGuid>
+    <ProjectGuid>{E9903D0A-5EAB-4F1F-9C72-53002CAA10FD}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>OOP_Principles</RootNamespace>
-    <AssemblyName>OOP_Principles</AssemblyName>
+    <RootNamespace>AnimalHierarchy</RootNamespace>
+    <AssemblyName>AnimalHierarchy</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,19 +42,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes.cs" />
-    <Compile Include="Discipline.cs" />
-    <Compile Include="IComment.cs" />
-    <Compile Include="MainSchool.cs" />
-    <Compile Include="Person.cs" />
+    <Compile Include="AnHierMain.cs" />
+    <Compile Include="Animal.cs" />
+    <Compile Include="Cat.cs" />
+    <Compile Include="Dog.cs" />
+    <Compile Include="Frog.cs" />
+    <Compile Include="ISound.cs" />
+    <Compile Include="Kitten.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="School.cs" />
-    <Compile Include="Student.cs" />
-    <Compile Include="Teacher.cs" />
+    <Compile Include="Tomcat.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
