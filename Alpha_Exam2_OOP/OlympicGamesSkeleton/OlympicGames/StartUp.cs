@@ -1,4 +1,5 @@
 ﻿using OlympicGames.Core;
+using OlympicGames.Olympics.Olympian;
 
 namespace OlympicGames
 {
@@ -8,6 +9,8 @@ namespace OlympicGames
         {
             // Don not touch here (Magic Unicorns)
             Engine.Instance.Run();
+
+            //Olympian olimpian = new Olympian("g", "L", "kj");
         }
     }
 }

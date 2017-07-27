@@ -5,6 +5,7 @@ using OlympicGames.Core.Contracts;
 using OlympicGames.Olympics.Contracts;
 using OlympicGames.Olympics;
 using OlympicGames.Olympics.Enums;
+using OlympicGames.Olympics.Olympian;
 
 namespace OlympicGames.Core.Factories
 {
@@ -24,8 +25,7 @@ namespace OlympicGames.Core.Factories
 
         public IOlympian CreateBoxer(string firstName, string lastName, string country, string category, int wins, int losses)
         {
-            // TODO: Implement this
-            throw new NotImplementedException();
+            return new Boxer(firstName, lastName, country, category, wins, losses);
         }
 
         public IOlympian CreateSprinter(string firstName, string lastName, string country, IDictionary<string, double> records)
