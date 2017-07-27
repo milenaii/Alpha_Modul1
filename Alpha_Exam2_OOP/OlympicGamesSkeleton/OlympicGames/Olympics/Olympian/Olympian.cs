@@ -1,5 +1,7 @@
 ﻿using OlympicGames.Olympics.Contracts;
 using OlympicGames.Utils;
+using System;
+
 namespace OlympicGames.Olympics.Olympian
 {
     public class Olympian : IOlympian
@@ -64,6 +66,7 @@ namespace OlympicGames.Olympics.Olympian
                 this.country = value;
             }
         }
+        
 
     }
 }

@@ -6,12 +6,13 @@ namespace OlympicGames.Olympics.Olympian
 {
     public class Sprinter : Olympian, ISprinter
     {
-
-        public Sprinter(string firstName, string lastName, string country)
+        public Sprinter(string firstName, string lastName, string country, IDictionary<string, double> personalRecords)
             : base(firstName, lastName, country)
         {
         }
 
         public IDictionary<string, double> PersonalRecords { get; }
+
+       
     }
 }

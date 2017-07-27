@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 using System.Reflection;
-
 using OlympicGames.Core.Contracts;
 using OlympicGames.Olympics.Contracts;
 

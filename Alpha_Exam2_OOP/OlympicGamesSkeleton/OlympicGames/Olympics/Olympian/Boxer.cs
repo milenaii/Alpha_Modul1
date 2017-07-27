@@ -18,11 +18,6 @@ namespace OlympicGames.Olympics.Olympian
             this.category = category;
             this.Wins = wins;
             this.Losses = losses;
-
-        }
-
-        public Boxer()
-        {
         }
 
         public BoxingCategory Category
@@ -59,5 +54,11 @@ namespace OlympicGames.Olympics.Olympian
                 this.losses = value;
             }
         }
+
+        public override string ToString()
+        {
+            return string.Format("BOXER: {0} {1} from {2}\nCategory: {3}\nWins: {4}\nLosses: {5}", this.FirstName, this.LastName, this.Country, this.Category, this.Wins, this.Losses);
+        }
+
     }
 }

@@ -12,6 +12,7 @@ namespace OlympicGames.Core.Factories
     public class OlympicsFactory : IOlympicsFactory
     {
         private static OlympicsFactory instance = new OlympicsFactory();
+        private IDictionary<string, double> personalRecords;
 
         private OlympicsFactory() { }
 
@@ -25,13 +26,15 @@ namespace OlympicGames.Core.Factories
 
         public IOlympian CreateBoxer(string firstName, string lastName, string country, string category, int wins, int losses)
         {
-            return new Boxer(firstName, lastName, country, category, wins, losses);
+            BoxingCategory finalCategory = BoxingCategory.Middleweight;
+            Enum.TryParse(category, out finalCategory);
+
+            return new Boxer(firstName, lastName, country, finalCategory, wins, losses);
         }
 
         public IOlympian CreateSprinter(string firstName, string lastName, string country, IDictionary<string, double> records)
         {
-            // TODO: Implement this
-            throw new NotImplementedException();
+            return new Sprinter(firstName, lastName, country,  personalRecords);
         }
     }
 }
