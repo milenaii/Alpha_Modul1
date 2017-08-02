@@ -8,8 +8,6 @@ namespace OlympicGames.Olympics.Olympian
     {
         private int wins;
         private int losses;
-        private const int MinWinsLosses = 0;
-        private const int MaxWinsLosses = 100;
         private BoxingCategory category;
 
         public Boxer(string firstName, string lastName, string country, BoxingCategory category, int wins, int losses )
@@ -36,7 +34,7 @@ namespace OlympicGames.Olympics.Olympian
             }
             set
             {
-                Validator.ValidateMinAndMaxNumber(this.wins, MinWinsLosses, MaxWinsLosses, null);
+                Validator.ValidateMinAndMaxNumber(this.wins, Constants.MinWinsLosses, Constants.MaxWinsLosses, null);
                 this.wins = value;
             }
         }
@@ -49,7 +47,7 @@ namespace OlympicGames.Olympics.Olympian
             }
             set
             {
-                Validator.ValidateMinAndMaxNumber(this.losses, MinWinsLosses, MaxWinsLosses, null);
+                Validator.ValidateMinAndMaxNumber(this.losses, Constants.MinWinsLosses, Constants.MaxWinsLosses, null);
 
                 this.losses = value;
             }

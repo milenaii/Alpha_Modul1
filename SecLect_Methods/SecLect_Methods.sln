@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.15
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetLargestNumber", "GetLargestNumber\GetLargestNumber.csproj", "{3868C591-87E6-4D27-B421-0D1B22F1350E}"
 EndProject
@@ -20,6 +20,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NFactorial", "NFactorial\NFactorial.csproj", "{05BFFE12-4F6B-48C0-8046-A37895A91895}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adding polynomials", "Adding polynomials\Adding polynomials.csproj", "{837D5FD8-9CEC-4018-9DF5-F9C9A91A5CF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstLargerThanNeigbours", "FirstLargerThanNeigbours\FirstLargerThanNeigbours.csproj", "{E00C59F7-0EDD-49B7-9E5D-90C4B2D6C879}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{837D5FD8-9CEC-4018-9DF5-F9C9A91A5CF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{837D5FD8-9CEC-4018-9DF5-F9C9A91A5CF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{837D5FD8-9CEC-4018-9DF5-F9C9A91A5CF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E00C59F7-0EDD-49B7-9E5D-90C4B2D6C879}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E00C59F7-0EDD-49B7-9E5D-90C4B2D6C879}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E00C59F7-0EDD-49B7-9E5D-90C4B2D6C879}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E00C59F7-0EDD-49B7-9E5D-90C4B2D6C879}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
