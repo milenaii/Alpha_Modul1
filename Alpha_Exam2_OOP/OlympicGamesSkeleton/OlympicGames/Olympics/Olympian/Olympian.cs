@@ -6,14 +6,9 @@ namespace OlympicGames.Olympics.Olympian
 {
     public class Olympian : IOlympian
     {
-
         private string firstName;
         private string lastName;
         private string country;
-        private const int MinLengthCountry = 3;
-        private const int MaxLengthCountry = 25;
-        private const int MinLengthName = 2;
-        private const int MaxLengthName = 20;
 
         public Olympian(string firstName, string lastName, string country)
         {
@@ -30,8 +25,8 @@ namespace OlympicGames.Olympics.Olympian
             }
             private set
             {
-                Validator.ValidateIfNull(this.firstName, null);
-                Validator.ValidateMinAndMaxLength(this.firstName, MinLengthName, MaxLengthName);
+                Validator.ValidateIfNull(value);
+                Validator.ValidateMinAndMaxLength(value, Constants.MinLengthName, Constants.MaxLengthName);
 
                 this.firstName = value;
             }
@@ -45,8 +40,8 @@ namespace OlympicGames.Olympics.Olympian
             }
             private set
             {
-                Validator.ValidateIfNull(this.lastName, null);
-                Validator.ValidateMinAndMaxLength(this.lastName, MinLengthName, MaxLengthName);
+                Validator.ValidateIfNull(value);
+                Validator.ValidateMinAndMaxLength(value, Constants.MinLengthName, Constants.MaxLengthName);
 
                 this.lastName = value;
             }
@@ -60,13 +55,16 @@ namespace OlympicGames.Olympics.Olympian
             }
             private set
             {
-                Validator.ValidateIfNull(this.country, null);
-                Validator.ValidateMinAndMaxLength(this.country, MinLengthCountry, MaxLengthCountry);
+                Validator.ValidateIfNull(value);
+                Validator.ValidateMinAndMaxLength(value, Constants.MinLengthCountry, Constants.MaxLengthCountry);
 
                 this.country = value;
             }
         }
-        
+        public override string ToString()
+        {
+            return $"{this.FirstName} {this.LastName} from {this.Country}\n";
+        }
 
     }
 }

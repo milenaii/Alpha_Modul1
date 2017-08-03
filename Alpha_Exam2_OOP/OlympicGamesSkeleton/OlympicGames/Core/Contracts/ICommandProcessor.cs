@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace OlympicGames.Core.Contracts
+namespace OlympicGames.Core.Factories
 {
     public interface ICommandProcessor 
     {

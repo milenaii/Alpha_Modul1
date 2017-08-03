@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-using OlympicGames.Core.Contracts;
+using OlympicGames.Core.Factories;
 using OlympicGames.Core.Factories;
 using OlympicGames.Core.Providers;
 

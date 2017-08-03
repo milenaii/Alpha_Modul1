@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-using OlympicGames.Core.Contracts;
+using OlympicGames.Core.Factories;
 using OlympicGames.Olympics.Contracts;
 using OlympicGames.Utils;
 using OlympicGames.Core.Commands.Abstracts;
@@ -16,11 +16,18 @@ namespace OlympicGames.Core.Commands
         public CreateSprinterCommand(IList<string> commandLine) 
             : base(commandLine)
         {
+            this.records = new Dictionary<string, double>();
         }
 
         public override string Execute()
         {
-            throw new NotImplementedException();
+            var parameters = this.CommandParameters;
+
+
+
+
+            //To string
+            return "";
         }
     }
 }

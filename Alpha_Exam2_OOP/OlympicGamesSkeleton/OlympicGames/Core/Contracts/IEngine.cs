@@ -1,4 +1,4 @@
-﻿namespace OlympicGames.Core.Contracts
+﻿namespace OlympicGames.Core.Factories
 {
     public interface IEngine
     {

@@ -3,7 +3,7 @@ using System.Linq;
 using System.Text;
 
 using OlympicGames.Core.Commands.Abstracts;
-using OlympicGames.Core.Contracts;
+using OlympicGames.Core.Factories;
 using OlympicGames.Utils;
 
 namespace OlympicGames.Core.Commands

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-using OlympicGames.Core.Contracts;
+using OlympicGames.Core.Factories;
 using OlympicGames.Olympics.Contracts;
 using OlympicGames.Olympics;
 using OlympicGames.Olympics.Enums;

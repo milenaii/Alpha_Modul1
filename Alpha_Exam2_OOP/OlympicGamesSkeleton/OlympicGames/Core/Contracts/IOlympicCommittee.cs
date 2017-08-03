@@ -2,7 +2,7 @@
 
 using OlympicGames.Olympics.Contracts;
 
-namespace OlympicGames.Core.Contracts
+namespace OlympicGames.Core.Factories
 {
     public interface IOlympicCommittee
     {

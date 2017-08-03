@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Reflection;
-using OlympicGames.Core.Contracts;
+using OlympicGames.Core.Factories;
 using OlympicGames.Olympics.Contracts;
 
 namespace OlympicGames.Core.Providers

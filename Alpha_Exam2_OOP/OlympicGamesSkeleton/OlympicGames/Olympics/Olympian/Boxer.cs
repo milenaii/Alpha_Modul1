@@ -1,6 +1,7 @@
 ﻿using OlympicGames.Olympics.Contracts;
 using OlympicGames.Olympics.Enums;
 using OlympicGames.Utils;
+using System.Text;
 
 namespace OlympicGames.Olympics.Olympian
 {
@@ -22,7 +23,7 @@ namespace OlympicGames.Olympics.Olympian
         {
             get
             {
-                return this.Category;
+                return this.category;
             }
         }
 
@@ -34,7 +35,7 @@ namespace OlympicGames.Olympics.Olympian
             }
             set
             {
-                Validator.ValidateMinAndMaxNumber(this.wins, Constants.MinWinsLosses, Constants.MaxWinsLosses, null);
+                Validator.ValidateMinAndMaxNumber(value, Constants.MinWinsLosses, Constants.MaxWinsLosses);
                 this.wins = value;
             }
         }
@@ -47,7 +48,7 @@ namespace OlympicGames.Olympics.Olympian
             }
             set
             {
-                Validator.ValidateMinAndMaxNumber(this.losses, Constants.MinWinsLosses, Constants.MaxWinsLosses, null);
+                Validator.ValidateMinAndMaxNumber(value, Constants.MinWinsLosses, Constants.MaxWinsLosses);
 
                 this.losses = value;
             }
@@ -55,8 +56,14 @@ namespace OlympicGames.Olympics.Olympian
 
         public override string ToString()
         {
-            return string.Format("BOXER: {0} {1} from {2}\nCategory: {3}\nWins: {4}\nLosses: {5}", this.FirstName, this.LastName, this.Country, this.Category, this.Wins, this.Losses);
+            StringBuilder sb = new StringBuilder(base.ToString());
+            sb.AppendLine($"Category: {this.Category}");
+            sb.AppendLine($"Wins: {this.Wins}");
+            sb.AppendLine($"Losses: {this.Losses}");
+
+            return sb.ToString().TrimEnd();
         }
+
 
     }
 }

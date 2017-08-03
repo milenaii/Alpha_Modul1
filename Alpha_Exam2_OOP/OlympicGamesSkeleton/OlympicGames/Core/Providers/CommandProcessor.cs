@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-using OlympicGames.Core.Contracts;
+using OlympicGames.Core.Factories;
 
 namespace OlympicGames.Core.Providers
 {
