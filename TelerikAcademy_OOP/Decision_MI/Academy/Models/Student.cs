@@ -28,13 +28,13 @@ namespace Academy.Models
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("* Student: ");
+            sb.AppendLine("* Student:");
             sb.AppendLine(" - Username: " + this.Username);
             sb.AppendLine(" - Track: " + this.Track);
-            sb.AppendLine(" - Course results: ");
-            sb.AppendLine(this.CourseResults.Count > 0 ? string.Join("\n", this.CourseResults) : Constants.noCourseResults); 
+            sb.AppendLine(" - Course results:");
+            sb.Append(this.CourseResults.Count > 0 ? string.Join("\n", this.CourseResults) : Constants.noCourseResults); 
 
-            return sb.ToString().TrimEnd();
+            return sb.ToString();
         }
 
     }

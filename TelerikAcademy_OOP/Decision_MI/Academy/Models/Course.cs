@@ -65,14 +65,14 @@ namespace Academy.Models
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("* Course");
+            sb.AppendLine("* Course:");
             sb.AppendLine(" - Name: " + this.Name);
             sb.AppendLine(" - Lectures per week: " + this.LecturesPerWeek);
             sb.AppendLine(" - Starting date: " + this.StartingDate);
             sb.AppendLine(" - Ending date: " + this.EndingDate);
             sb.AppendLine(" - Onsite students: " + this.OnsiteStudents.Count);
             sb.AppendLine(" - Online students: " + this.OnlineStudents.Count);
-            sb.AppendLine(" - Lectures: ");
+            sb.AppendLine(" - Lectures:");
             sb.AppendLine(this.Lectures.Count > 0 ? string.Join("\n", this.Lectures) : Constants.noLectures);
 
             return sb.ToString(); 

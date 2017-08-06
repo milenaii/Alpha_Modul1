@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace Academy.Models
 {
-    public class DemoResource : LectureResource
+    public class PresentationResource : LectureResource
     {
-        public DemoResource(string name, string url)
-            :base(name, url)
+        public PresentationResource(string name, string url)
+            : base(name, url)
         {
 
         }
 
         public override string Type()
         {
-             return "Demo";
+            return "Presentation";
         }
 
     }

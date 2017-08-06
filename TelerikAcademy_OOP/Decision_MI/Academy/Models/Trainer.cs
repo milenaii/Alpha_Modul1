@@ -20,7 +20,7 @@ namespace Academy.Models
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("* Trainer: ");
+            sb.AppendLine("* Trainer:");
             sb.AppendLine(" - Username: " + this.Username);
             sb.AppendLine(" - Technologies: " + string.Join("; ",this.Technologies));
 

@@ -31,7 +31,7 @@ namespace Academy.Commands.Listing
                 sb.AppendLine(student.ToString());
             }
 
-            return sb.ToString();
+            return sb.Length > 0 ? sb.ToString().TrimEnd() : "There are no registered users!";
 
         }
     }

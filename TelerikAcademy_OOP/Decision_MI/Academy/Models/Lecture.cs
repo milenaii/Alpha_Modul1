@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Academy.Models.Utils;
+using Academy.Models.Contracts;
 
 namespace Academy.Models
 {
@@ -20,7 +21,7 @@ namespace Academy.Models
             this.Date = DateParser.Parser(date);
             this.Trainer = Trainer;
 
-            this.Resources = new List<ILectureResource>();
+            this.Resources = new List<Contracts.ILectureResource>();
         }
 
         public string Name
@@ -43,17 +44,17 @@ namespace Academy.Models
 
         public ITrainer Trainer { get; set; }
 
-        public IList<ILectureResource> Resources { get; set; }
+        public IList<Contracts.ILectureResource> Resources { get; set; }
 
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine(" * Lecture:");
-            sb.AppendLine($" - Name: {this.Name}");
-            sb.AppendLine($" - Date: {this.Date}");
-            sb.AppendLine($" - Trainer username: {this.Trainer.Username}");
-            sb.AppendLine($" - Resources:");
-            sb.Append($"  * There are no resources in this lecture.");
+            sb.AppendLine("  * Lecture:");
+            sb.AppendLine($"   - Name: {this.Name}");
+            sb.AppendLine($"   - Date: {this.Date}");
+            sb.AppendLine($"   - Trainer username: {this.Trainer.Username}");
+            sb.AppendLine($"   - Resources:");
+            sb.Append(this.Resources.Count > 0 ? string.Join(" ",this.Resources) : "    * There are no resources in this lecture.");
 
             return sb.ToString();
         }

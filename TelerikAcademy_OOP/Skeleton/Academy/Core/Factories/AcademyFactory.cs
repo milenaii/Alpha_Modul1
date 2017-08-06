@@ -38,22 +38,26 @@ namespace Academy.Core.Factories
 
         public IStudent CreateStudent(string username, string track)
         {
-            return new Student(username, track);
+            // TODO: Implement this
+            throw new NotImplementedException("Student class not attached to factory.");
         }
 
         public ITrainer CreateTrainer(string username, string technologies)
         {
-            return new Trainer(username,technologies);
+            // TODO: Implement this
+            throw new NotImplementedException("Trainer class not attached to factory.");
         }
 
         public ICourse CreateCourse(string name, string lecturesPerWeek, string startingDate)
         {
-            return new Course(name, lecturesPerWeek, startingDate);
+            // TODO: Implement this
+            throw new NotImplementedException("Course class not attached to factory.");
         }
 
         public ILecture CreateLecture(string name, string date, ITrainer trainer)
         {
-            return new Lecture(name, date, trainer);
+            // TODO: Implement this
+            throw new NotImplementedException("Lecture class not attached to factory.");
         }
 
         public ILectureResource CreateLectureResource(string type, string name, string url)
@@ -61,36 +65,23 @@ namespace Academy.Core.Factories
             // Use this instead of DateTime.Now if you want any points in BGCoder!!
             var currentDate = DateTimeProvider.Now;
 
-            ResourceType parseResourceAsNum; 
+            //switch (type)
+            //{
+            //    case "video":
+            //    case "presentation": 
+            //    case "demo": 
+            //    case "homework": 
+            //    default: throw new ArgumentException("Invalid lecture resource type");
+            //}
 
-            Enum.TryParse<ResourceType>(type, true, out parseResourceAsNum);
-
-            switch (parseResourceAsNum)
-            {
-                case ResourceType.Video:
-                    return new VideoResource(name, url, currentDate);
-                case ResourceType.Presentation:
-                    return new PresentationResource(name, url);
-                case ResourceType.Demo:
-                    return new DemoResource(name, url);
-                case ResourceType.Homework:
-                    return new HomeworkResource(name, url, currentDate.AddDays(7));
-
-                default: throw new ArgumentException("Invalid lecture resource type");
-            }
-
-            //// TODO: Implement this
-            //throw new NotImplementedException("LectureResource classes not attached to factory.");
+            // TODO: Implement this
+            throw new NotImplementedException("LectureResource classes not attached to factory.");
         }
 
         public ICourseResult CreateCourseResult(ICourse course, string examPoints, string coursePoints)
         {
-            return new CourseResult(course, examPoints, coursePoints);
+            // TODO: Implement this
+            throw new NotImplementedException("CourseResult class not attached to factory.");
         }
-
-        //Models.Contracts.ILectureResource IAcademyFactory.CreateLectureResource(string type, string name, string url)
-        //{
-        //    throw new NotImplementedException();
-        //}
     }
 }
