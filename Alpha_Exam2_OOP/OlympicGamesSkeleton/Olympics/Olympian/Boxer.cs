@@ -37,7 +37,8 @@ namespace OlympicGames.Olympics.Olympian
             {
                 //msg = string.Format("Value must be between {0} and {1}!", min, max)
 
-                Validator.ValidateMinAndMaxNumber(Wins, Constants.MinWinsLosses, Constants.MaxWinsLosses);
+                Validator.ValidateMinAndMaxNumber(value, Constants.MinWinsLosses, Constants.MaxWinsLosses,string.Format(Constants.WinsRangeInvalid, Constants.MinWinsLosses, Constants.MaxWinsLosses));
+
                 this.wins = value;
             }
         }
@@ -50,7 +51,7 @@ namespace OlympicGames.Olympics.Olympian
             }
             set
             {
-                Validator.ValidateMinAndMaxNumber(value, Constants.MinWinsLosses, Constants.MaxWinsLosses);
+                Validator.ValidateMinAndMaxNumber(value, Constants.MinWinsLosses, Constants.MaxWinsLosses,string.Format(Constants.LossesRangeInvalid, Constants.MinWinsLosses, Constants.MaxWinsLosses));
 
                 this.losses = value;
             }

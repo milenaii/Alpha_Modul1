@@ -60,7 +60,7 @@ namespace Academy.Models
             sb.AppendLine($"     - Url: {this.Url}");
             sb.AppendLine($"     - Type: {this.Type()}");
 
-            return sb.ToString().TrimEnd();
+            return sb.ToString();
         }
 
     }
