@@ -20,7 +20,7 @@
 
         public IToothpaste CreateToothpaste(string name, string brand, decimal price, GenderType gender, IList<string> ingredients)
         {
-            return new Toothpaste(name, brand, price, gender, ingredients); 
+            return new Toothpaste(name, brand, price, gender, ingredients);
         }
 
         public IShoppingCart ShoppingCart()

@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B005C0B3-5C89-45A7-9BE1-FAB966806F40}</ProjectGuid>
+    <ProjectGuid>{8E9B15A2-1CE6-48E4-8143-E6B4BE5CB7B2}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Cosmetics</RootNamespace>
-    <AssemblyName>Cosmetics</AssemblyName>
+    <RootNamespace>FurnitureManufacturer</RootNamespace>
+    <AssemblyName>Furnitures</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,29 +41,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\GenderType.cs" />
-    <Compile Include="Common\GlobalErrorMessages.cs" />
-    <Compile Include="Common\UsageType.cs" />
-    <Compile Include="Common\Validator.cs" />
-    <Compile Include="Contracts\ICategory.cs" />
-    <Compile Include="Contracts\ICommand.cs" />
-    <Compile Include="Contracts\ICosmeticsFactory.cs" />
-    <Compile Include="Contracts\IEngine.cs" />
-    <Compile Include="Contracts\IProduct.cs" />
-    <Compile Include="Contracts\IShampoo.cs" />
-    <Compile Include="Contracts\IShoppingCart.cs" />
-    <Compile Include="Contracts\IToothpaste.cs" />
-    <Compile Include="CosmeticsProgram.cs" />
     <Compile Include="Engine\Command.cs" />
-    <Compile Include="Engine\CosmeticsEngine.cs" />
-    <Compile Include="Engine\CosmeticsFactory.cs" />
-    <Compile Include="Products\Cathegory.cs" />
-    <Compile Include="Products\DoNotDeleteMe!!!.cs" />
-    <Compile Include="Products\ICathegory.cs" />
-    <Compile Include="Products\Product.cs" />
-    <Compile Include="Products\Shampoo.cs" />
-    <Compile Include="Products\ShoppingCart.cs" />
-    <Compile Include="Products\Toothpaste.cs" />
+    <Compile Include="Engine\ConsoleRenderer.cs" />
+    <Compile Include="Engine\EngineConstants.cs" />
+    <Compile Include="Engine\Factories\CompanyFactory.cs" />
+    <Compile Include="Engine\Factories\FurnitureFactory.cs" />
+    <Compile Include="Engine\FurnitureManufacturerEngine.cs" />
+    <Compile Include="FurnitureProgram.cs" />
+    <Compile Include="Interfaces\Engine\IRenderer.cs" />
+    <Compile Include="Models\AdjustableChair.cs" />
+    <Compile Include="Models\Chair.cs" />
+    <Compile Include="Models\ChairType.cs" />
+    <Compile Include="Models\Company.cs" />
+    <Compile Include="Models\ConvertibleChair.cs" />
+    <Compile Include="Models\Furniture.cs" />
+    <Compile Include="Models\MaterialType.cs" />
+    <Compile Include="Interfaces\IAdjustableChair.cs" />
+    <Compile Include="Interfaces\IChair.cs" />
+    <Compile Include="Interfaces\Engine\ICommand.cs" />
+    <Compile Include="Interfaces\ICompany.cs" />
+    <Compile Include="Interfaces\Engine\ICompanyFactory.cs" />
+    <Compile Include="Interfaces\IConvertibleChair.cs" />
+    <Compile Include="Interfaces\IFurniture.cs" />
+    <Compile Include="Interfaces\Engine\IFurnitureFactory.cs" />
+    <Compile Include="Interfaces\Engine\IFurnituresManufacturerEngine.cs" />
+    <Compile Include="Interfaces\ITable.cs" />
+    <Compile Include="Models\Table.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
