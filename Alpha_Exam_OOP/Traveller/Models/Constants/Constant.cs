@@ -20,8 +20,8 @@ namespace Traveller.Models.Constants
         public const string VehicleExceptionPricePerKm = "A vehicle with a price per kilometer lower than $0.10 or higher than $2.50 cannot exist!";
         
         //Train
-        public const int TrainMinPassanger = 1;
-        public const int TrainMaxPassanger = 800;
+        public const int TrainMinPassanger = 30;
+        public const int TrainMaxPassanger = 150;
 
         public const string TrainExceptionPassengers = "A train cannot have less than 30 passengers or more than 150 passengers.";
 

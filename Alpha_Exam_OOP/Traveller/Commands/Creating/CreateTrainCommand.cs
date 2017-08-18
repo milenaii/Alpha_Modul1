@@ -5,7 +5,7 @@ using Traveller.Core.Contracts;
 
 namespace Traveller.Commands.Creating
 {
-    public class CreateTrainCommand : ICommand
+    public class CreateTrainCommand : Contracts.Command
     {
         private readonly ITravellerFactory factory;
         private readonly IEngine engine;

@@ -2,7 +2,7 @@
 
 namespace Traveller.Commands.Contracts
 {
-    public interface ICommand
+    public interface Command
     {
         string Execute(IList<string> parameters);
     }

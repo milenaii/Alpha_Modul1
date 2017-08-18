@@ -44,7 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\Contracts\ICommand.cs" />
+    <Compile Include="Commands\Creating\Command.cs" />
+    <Compile Include="Commands\Creating\CreateAirplaneCommand.cs" />
     <Compile Include="Commands\Creating\CreateJourneyCommand.cs" />
+    <Compile Include="Commands\Creating\CreateTicketCommand.cs" />
     <Compile Include="Commands\Creating\CreateTrainCommand.cs" />
     <Compile Include="Commands\Creating\CreateBusCommand.cs" />
     <Compile Include="Commands\Creating\CreateVehicleCommand.cs" />
@@ -62,10 +65,13 @@
     <Compile Include="Core\Providers\CommandParser.cs" />
     <Compile Include="Core\Providers\ConsoleReader.cs" />
     <Compile Include="Core\Providers\ConsoleWriter.cs" />
+    <Compile Include="Models\Airplane.cs" />
+    <Compile Include="Models\Bus.cs" />
     <Compile Include="Models\Constants\Constant.cs" />
     <Compile Include="Models\Contracts\IJourney.cs" />
     <Compile Include="Models\Contracts\ITicket.cs" />
     <Compile Include="Models\Enum\VehicleType.cs" />
+    <Compile Include="Models\Journey.cs" />
     <Compile Include="Models\Train.cs" />
     <Compile Include="Models\Vehicle.cs" />
     <Compile Include="Models\Vehicles\Contracts\IVehicle.cs" />

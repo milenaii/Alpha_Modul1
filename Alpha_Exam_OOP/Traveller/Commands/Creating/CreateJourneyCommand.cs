@@ -6,7 +6,7 @@ using Traveller.Models.Vehicles.Contracts;
 
 namespace Traveller.Commands.Creating
 {
-    public class CreateJourneyCommand : ICommand
+    public class CreateJourneyCommand : Contracts.Command
     {
         private readonly ITravellerFactory factory;
         private readonly IEngine engine;

@@ -29,17 +29,18 @@ namespace Traveller.Core.Factories
 
         public IAirplane CreateAirplane(int passengerCapacity, decimal pricePerKilometer, bool hasFreeFood)
         {
-            throw new NotImplementedException("You are invoking a TravellerFactory method that is not yet implemented!");
+            return new Airplane(passengerCapacity, pricePerKilometer, hasFreeFood);
         }
 
         public ITrain CreateTrain(int passengerCapacity, decimal pricePerKilometer, int carts)
         {
-            throw new NotImplementedException("You are invoking a TravellerFactory method that is not yet implemented!");
+            return new Train(passengerCapacity, pricePerKilometer, carts);
         }
         
         public IJourney CreateJourney(string startLocation, string destination, int distance, IVehicle vehicle)
         {
-            throw new NotImplementedException("You are invoking a TravellerFactory method that is not yet implemented!");
+            return new Journey(startLocation, destination, distance, vehicleID);
+
         }
 
         public ITicket CreateTicket(IJourney journey, decimal administrativeCosts)

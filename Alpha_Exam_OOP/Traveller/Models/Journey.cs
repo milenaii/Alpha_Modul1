@@ -20,7 +20,7 @@ namespace Traveller.Models
             this.StartLocation = startLocation;
             this.Destination = destination;
             this.Distance = distance;
-           // this.vehicleID = vehicleID;
+            this.vehicleID = vehicleID;
 
         }
 
@@ -89,7 +89,7 @@ namespace Traveller.Models
             sb.AppendLine("Journey ----");
             sb.AppendLine($"Start location: {this.StartLocation}");
             sb.AppendLine($"Destination: {this.Destination}");
-            sb.AppendLine($"Vehicle type: {this.Vehicletype}");
+            //sb.AppendLine($"Vehicle type: {VehicleType}");
             sb.AppendLine($"Travel costs: {CalculateTravelCosts()}");
 
             return sb.ToString().TrimEnd();

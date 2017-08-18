@@ -11,11 +11,11 @@ namespace Traveller.Core.Providers
     public class CommandParser : IParser
     {
         // Magic, do not touch!
-        public ICommand ParseCommand(string fullCommand)
+        public Command ParseCommand(string fullCommand)
         {
             var commandName = fullCommand.Split(' ')[0];
             var commandTypeInfo = this.FindCommand(commandName);
-            var command = Activator.CreateInstance(commandTypeInfo, TravellerFactory.Instance, Engine.Instance) as ICommand;
+            var command = Activator.CreateInstance(commandTypeInfo, TravellerFactory.Instance, Engine.Instance) as Command;
 
             return command;
         }
@@ -39,7 +39,7 @@ namespace Traveller.Core.Providers
         {
             Assembly currentAssembly = this.GetType().GetTypeInfo().Assembly;
             var commandTypeInfo = currentAssembly.DefinedTypes
-                .Where(type => type.ImplementedInterfaces.Any(inter => inter == typeof(ICommand)))
+                .Where(type => type.ImplementedInterfaces.Any(inter => inter == typeof(Command)))
                 .Where(type => type.Name.ToLower() == (commandName.ToLower() + "command"))
                 .SingleOrDefault();
 

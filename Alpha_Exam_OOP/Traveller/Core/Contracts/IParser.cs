@@ -5,7 +5,7 @@ namespace Traveller.Core.Contracts
 {
     public interface IParser
     {
-        ICommand ParseCommand(string fullCommand);
+        Command ParseCommand(string fullCommand);
 
         IList<string> ParseParameters(string fullCommand);
     }
