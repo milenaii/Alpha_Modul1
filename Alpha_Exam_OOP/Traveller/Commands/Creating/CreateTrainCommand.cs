@@ -5,16 +5,20 @@ using Traveller.Core.Contracts;
 
 namespace Traveller.Commands.Creating
 {
-    public class CreateTrainCommand : Contracts.Command
+    public class CreateTrainCommand : Command, ICreateTrainCommand
     {
-        private readonly ITravellerFactory factory;
-        private readonly IEngine engine;
-
-        public CreateTrainCommand(ITravellerFactory factory, IEngine engine)
+        public CreateTrainCommand(ITravellerFactory factory, IEngine engine) : base(factory, engine)
         {
-            this.factory = factory;
-            this.engine = engine;
         }
+
+        //private readonly ITravellerFactory factory;
+        //private readonly IEngine engine;
+
+        //public CreateTrainCommand(ITravellerFactory factory, IEngine engine)
+        //{
+        //    this.factory = factory;
+        //    this.engine = engine;
+        //}
 
         public string Execute(IList<string> parameters)
         {

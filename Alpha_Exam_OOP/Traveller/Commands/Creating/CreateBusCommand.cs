@@ -5,8 +5,13 @@ using Traveller.Core.Contracts;
 
 namespace Traveller.Commands.Creating
 {
-    public class CreateBusCommand : CreateVehicleCommand, Contracts.Command
+    public class CreateBusCommand : Command, ICreateBusCommand
     {
+        public CreateBusCommand(ITravellerFactory factory, IEngine engine) 
+            : base(factory, engine)
+        {
+        }
+
         //private readonly ITravellerFactory factory;
         //private readonly IEngine engine;
 
