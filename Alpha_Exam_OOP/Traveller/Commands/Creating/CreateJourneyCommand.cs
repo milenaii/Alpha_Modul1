@@ -6,18 +6,18 @@ using Traveller.Models.Vehicles.Contracts;
 
 namespace Traveller.Commands.Creating
 {
-    public class CreateJourneyCommand : Command
+    public class CreateJourneyCommand : ICommand
     {
-        //private readonly ITravellerFactory factory;
-        //private readonly IEngine engine;
+        private readonly ITravellerFactory factory;
+        private readonly IEngine engine;
 
-        //public CreateJourneyCommand(ITravellerFactory factory, IEngine engine)
-        //{
-        //    this.factory = factory;
-        //    this.engine = engine;
-        //}
+        public CreateJourneyCommand(ITravellerFactory factory, IEngine engine)
+        {
+            this.factory = factory;
+            this.engine = engine;
+        }
 
-        public override string Execute(IList<string> parameters)
+        public string Execute(IList<string> parameters)
         {
             string startLocation;
             string destination;

@@ -2,31 +2,34 @@
 using System.Collections.Generic;
 using Traveller.Commands.Contracts;
 using Traveller.Core.Contracts;
+using Traveller.Commands.Creating;
+using Traveller.Commands.Listing;
+using Traveller.Models.Vehicles.Contracts;
 
 namespace Traveller.Commands.Creating
 {
     // TODO
-    public class ListVehiclesCommand : Command, IListVehiclesCommand, IListVehiclesCommand1
+    public class ListVehiclesCommand : ListingCommand<IVehicle>, ICommand
     {
-        private readonly ITravellerFactory factory;
-        private readonly IEngine engine;
-
         public ListVehiclesCommand(ITravellerFactory factory, IEngine engine)
+            : base(factory, engine)
         {
-            this.factory = factory;
-            this.engine = engine;
         }
 
-        public string Execute(IList<string> parameters)
+        protected override ICollection<IVehicle> Items
         {
-            var vehicle = this.engine.Vehicles;
+            get
+            {
+                return this.engine.Vehicles;
+            }
+        }
 
-            if (vehicle.Count == 0)
+        protected override string CustomErrorMessage
+        {
+            get
             {
                 return "There are no registered vehicles.";
             }
-
-            return string.Join(Environment.NewLine + "####################" + Environment.NewLine, vehicle);
         }
     }
 }

@@ -2,25 +2,18 @@
 using System.Collections.Generic;
 using Traveller.Commands.Contracts;
 using Traveller.Core.Contracts;
+using Traveller.Models.Vehicles.Contracts;
 
 namespace Traveller.Commands.Creating
 {
-    public class CreateTrainCommand : Command, ICreateTrainCommand
+    public class CreateTrainCommand : CreateVehicleCommand, ICommand
     {
-        public CreateTrainCommand(ITravellerFactory factory, IEngine engine) : base(factory, engine)
+        public CreateTrainCommand(ITravellerFactory factory, IEngine engine)
+            : base(factory, engine)
         {
         }
 
-        //private readonly ITravellerFactory factory;
-        //private readonly IEngine engine;
-
-        //public CreateTrainCommand(ITravellerFactory factory, IEngine engine)
-        //{
-        //    this.factory = factory;
-        //    this.engine = engine;
-        //}
-
-        public string Execute(IList<string> parameters)
+        protected override IVehicle CreateVehicle(IList<string> parameters)
         {
             int passengerCapacity;
             decimal pricePerKilometer;
@@ -38,9 +31,7 @@ namespace Traveller.Commands.Creating
             }
 
             var train = this.factory.CreateTrain(passengerCapacity, pricePerKilometer, cartsCount);
-            this.engine.Vehicles.Add(train);
-
-            return $"Vehicle with ID {engine.Vehicles.Count - 1} was created.";
+            return train;
         }
     }
 }

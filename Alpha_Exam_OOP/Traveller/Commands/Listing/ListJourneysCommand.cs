@@ -2,30 +2,32 @@
 using System.Collections.Generic;
 using Traveller.Commands.Contracts;
 using Traveller.Core.Contracts;
+using Traveller.Commands.Creating;
+using Traveller.Models.Contracts;
+using Traveller.Commands.Listing;
 
 namespace Traveller.Commands.Creating
 {
-    public class ListJourneysCommand : Contracts.Command
+    public class ListJourneysCommand : ListingCommand<IJourney>, ICommand
     {
-        private readonly ITravellerFactory factory;
-        private readonly IEngine engine;
-
-        public ListJourneysCommand(ITravellerFactory factory, IEngine engine)
+        public ListJourneysCommand(ITravellerFactory factory, IEngine engine): base(factory, engine)
         {
-            this.factory = factory;
-            this.engine = engine;
         }
 
-        public string Execute(IList<string> parameters)
+        protected override ICollection<IJourney> Items
         {
-            var journeys = this.engine.Journeys;
+            get
+            {
+                return this.engine.Journeys;
+            }
+        }
 
-            if (journeys.Count == 0)
+        protected override string CustomErrorMessage
+        {
+            get
             {
                 return "There are no registered journeys.";
             }
-
-            return string.Join(Environment.NewLine + "####################" + Environment.NewLine, journeys);
         }
     }
 }

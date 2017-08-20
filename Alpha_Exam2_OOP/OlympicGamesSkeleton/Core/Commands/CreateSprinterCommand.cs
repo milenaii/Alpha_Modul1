@@ -1,4 +1,5 @@
 ﻿using OlympicGames.Core.Commands.Abstracts;
+using OlympicGames.Core.Factories;
 using OlympicGames.Olympics;
 using OlympicGames.Olympics.Contracts;
 using OlympicGames.Utils;
@@ -9,7 +10,7 @@ using System.Text;
 
 namespace OlympicGames.Core.Commands
 {
-    public class CreateSprinterCommand :Command
+    public class CreateSprinterCommand :Command, ICommand
     {
         // Consider using the dictionary
         private readonly IDictionary<string, double> records;

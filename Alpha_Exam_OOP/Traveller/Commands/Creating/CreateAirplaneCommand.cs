@@ -3,18 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Traveller.Commands.Contracts;
 using Traveller.Core.Contracts;
+using Traveller.Models.Vehicles.Contracts;
 
-namespace Traveller.Commands.Creating
+    namespace Traveller.Commands.Creating
 {
     // TODO
-    public class CreateAirplaneCommand : Command, ICreateAirplaneCommand
+    public class CreateAirplaneCommand : CreateVehicleCommand, ICommand
     {
-        public CreateAirplaneCommand(ITravellerFactory factory, IEngine engine) : base(factory, engine)
+
+        public CreateAirplaneCommand(ITravellerFactory factory, IEngine engine) 
+            : base(factory, engine)
         {
         }
 
-        public string Execute(IList<string> parameters)
+        protected override IVehicle CreateVehicle(IList<string> parameters)
         {
             int passengerCapacity;
             decimal pricePerKilometer;
@@ -28,13 +32,11 @@ namespace Traveller.Commands.Creating
             }
             catch
             {
-                throw new ArgumentException("Failed to parse CreateBus command parameters.");
+                throw new ArgumentException("Failed to parse CreateAirplane command parameters.");
             }
+            var airplane = this.factory.CreateAirplane(passengerCapacity, pricePerKilometer, hasFreeFood);
+            return airplane;
 
-            var bus = this.factory.CreateBus(passengerCapacity, pricePerKilometer);
-            this.engine.Vehicles.Add(bus);
-
-            return $"Vehicle with ID {engine.Vehicles.Count - 1} was created.";
         }
     }
 }

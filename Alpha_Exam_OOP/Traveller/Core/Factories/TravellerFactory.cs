@@ -39,7 +39,7 @@ namespace Traveller.Core.Factories
         
         public IJourney CreateJourney(string startLocation, string destination, int distance, IVehicle vehicle)
         {
-            return new Journey(startLocation, destination, distance, vehicleID);
+            return new Journey(startLocation, destination, distance, vehicle);
 
         }
 

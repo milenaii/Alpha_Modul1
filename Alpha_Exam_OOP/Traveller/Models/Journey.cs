@@ -15,12 +15,12 @@ namespace Traveller.Models
         private string destination;
         private int distance;
 
-        public Journey(string startLocation, string destination, int distance, int vehicleID)
+        public Journey(string startLocation, string destination, int distance, IVehicle vehicle)
         {
             this.StartLocation = startLocation;
             this.Destination = destination;
             this.Distance = distance;
-            this.vehicleID = vehicleID;
+            this.Vehicle = vehicle;
 
         }
 

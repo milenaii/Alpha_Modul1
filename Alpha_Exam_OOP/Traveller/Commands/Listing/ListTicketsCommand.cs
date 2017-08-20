@@ -1,32 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Traveller.Commands.Contracts;
-using Traveller.Core.Contracts;
+﻿//using System;
+//using System.Collections.Generic;
+//using System.Linq;
+//using Traveller.Commands.Contracts;
+//using Traveller.Core.Contracts;
+//using Traveller.Commands.Creating;
 
-namespace Traveller.Commands.Creating
-{
-    public class ListTicketsCommand : Contracts.Command
-    {
-        private readonly ITravellerFactory factory;
-        private readonly IEngine engine;
 
-        public ListTicketsCommand(ITravellerFactory factory, IEngine engine)
-        {
-            this.factory = factory;
-            this.engine = engine;
-        }
+//namespace Traveller.Commands.Creating
+//{
+//    public class ListTicketsCommand : Command
+//    {
+//        private readonly ITravellerFactory factory;
+//        private readonly IEngine engine;
 
-        public string Execute(IList<string> parameters)
-        {
-            var tickets = this.engine.Tickets;
+//        public ListTicketsCommand(ITravellerFactory factory, IEngine engine)
+//        {
+//            this.factory = factory;
+//            this.engine = engine;
+//        }
 
-            if (tickets.Count == 0)
-            {
-                return "There are no registered tickets.";
-            }
+//        public string Execute(IList<string> parameters)
+//        {
+//            var tickets = this.engine.Tickets;
 
-            return string.Join(Environment.NewLine + "####################" + Environment.NewLine, tickets);
-        }
-    }
-}
+//            if (tickets.Count == 0)
+//            {
+//                return "There are no registered tickets.";
+//            }
+
+//            return string.Join(Environment.NewLine + "####################" + Environment.NewLine, tickets);
+//        }
+//    }
+//}
